@@ -4,7 +4,6 @@ while True:
     match user_action.lower().strip():
         case 'add':
             todo = input("Enter a todo: ") + '\n'
-
             file = open('todos.txt', 'r')
             todos = file.readlines()
             file.close()
