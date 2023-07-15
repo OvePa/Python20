@@ -1,6 +1,1 @@
 play
-eat
-run
-watch
-cut
-write

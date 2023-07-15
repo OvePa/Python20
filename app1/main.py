@@ -2,6 +2,7 @@ while True:
     user_action = input("Type add, show, edit, complete or exit: ")
 
     match user_action.lower().strip():
+
         case 'add':
             todo = input("Enter a todo: ") + '\n'
 
@@ -12,6 +13,7 @@ while True:
 
             with open('todos.txt', 'w') as file:
                 file.writelines(todos)
+
         case 'show':
             with open('todos.txt', 'r') as file:
                 todos = file.readlines()
@@ -24,13 +26,30 @@ while True:
         case 'edit':
             number = int(input('Number of the todo to edit: '))
             number = number - 1
+
+            with open('todos.txt', 'r') as file:
+                todos = file.readlines()
+
             existing_todo = todos[number]
             print('Todo to edit: ', existing_todo.title())
-            todos[number] = input('New Todo: ')
+            todos[number] = input('New Todo: ') + '\n'
+
+            with open('todos.txt', 'w') as file:
+                todos = file.writelines(todos)
+
         case 'complete':
-            number = int(input('Number of the todo to edit: '))
-            number = number - 1
-            todos.pop(number)
+            number = int(input('Number of the todo to complete: '))
+
+            with open('todos.txt', 'r') as file:
+                todos = file.readlines()
+
+            todo_removed = todos.pop(number - 1).strip('\n').upper()
+
+            with open('todos.txt', 'w') as file:
+                todos = file.writelines(todos)
+
+            message = f'Todo {todo_removed} was removed from the list!'
+            print(message)
 
         case 'exit':
             break
