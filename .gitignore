@@ -4,3 +4,4 @@ bonus/
 files/
 exercises/
 journal/
+__pycache__/
