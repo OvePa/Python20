@@ -2,3 +2,4 @@ Eat
 clean
 run
 play ps4
+master python
