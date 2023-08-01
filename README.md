@@ -10,4 +10,4 @@ PDF files created with FPDF
 
 ## 3.- ToDo/
 
-App created in shell, GUI and Web
+App in script, GUI and Web
