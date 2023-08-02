@@ -12,10 +12,7 @@ def send_email(body):
     receiver = "hibah2222@gmail.com"
     context = ssl.create_default_context()
 
-    message = f"""    
-    Topic: Tesla
-    {body}
-    """
+    message = body
 
     with smtplib.SMTP_SSL(host, port, context=context) as server:
         server.login(username, password)
