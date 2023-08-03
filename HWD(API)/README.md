@@ -1,3 +1,3 @@
-# What does this app do?
+# What is this project?
 
 Historical Weather Data API in Flask
