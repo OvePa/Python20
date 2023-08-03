@@ -19,3 +19,7 @@ Reads txt files and convert them into PDF files
 ## 5.- News Digest/
 
 This app accesses news about a particular topic and sends them by email(API).
+
+## 6.- HWD(API)
+
+Historical Weather Data API in Flask
